@@ -5,6 +5,7 @@ gem 'rails'
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'haml-rails'
+gem 'less-rails'
 gem "twitter-bootstrap-rails"
 
 gem 'pg'
