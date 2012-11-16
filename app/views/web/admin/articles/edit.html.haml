@@ -1,2 +1,1 @@
-%h1 Web::Admin::Articles#edit
-%p Find me in app/views/web/admin/articles/edit.html.haml
+= render "form", {:url => admin_articles_path(@article), :legend => t(".edit_article")}

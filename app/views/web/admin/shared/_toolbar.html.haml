@@ -1,0 +1,16 @@
+.toolbar
+  .span3
+    .toolbar-item-content
+      = link_to link_title, link_path, :class => "btn"
+  - if collection.num_pages > 1
+    .toolbar-item-content.pull-right
+      .toolbar-item-name #{t(".page")}:
+      .pagination
+        = paginate collection
+  - if collection.any?
+    .toolbar-item-content.pull-right
+      .toolbar-item-name #{t(".items")}:
+      .pagination
+        %ul
+          - paginate_per_page_values.each do |v|
+            = paginate_per_page_item :li, v, url_for(params.merge(:page => 1, :per_page => v))

@@ -1,2 +1,24 @@
-%h1 Web::Admin::Articles#index
-%p Find me in app/views/web/admin/articles/index.html.haml
+/= render 'filter'
+%table.table.table-striped
+  %thead
+    %tr
+      - with_options :per_page => params[:per_page] do |c|
+        %th= c.sort_link @search, :title
+        %th= c.sort_link @search, :description
+        %th= Article.human_attribute_name('photo')
+        %th= c.sort_link @search, :state
+        %th= t(:control)
+  %tbody
+    - @articles.each do |p|
+      %tr
+        %td= p.title
+        %td= p.short_description
+        %td= image_tag(p.photo.thumb.url) if p.photo?
+        %td= p.state_label
+        %td
+          = link_to edit_admin_article_path(p) do
+            %i.icon-edit{:title => t(:edit)}
+          = link_to admin_article_path(p), :data => {:method => :delete, :confirm => t(:sure)} do
+            %i.icon-remove{:title => t(:delete)}
+.form-actions
+  = render "web/admin/shared/toolbar", {:collection => @articles, :link_title => t(".add_article"), :link_path => new_admin_article_path}
