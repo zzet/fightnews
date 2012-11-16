@@ -35,3 +35,7 @@ Fightnews::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 end
+
+ActionDispatch::Reloader.to_prepare do
+    load Rails.root.join('lib/configus.rb')
+end

@@ -71,7 +71,8 @@ group :test do
   gem 'simplecov', :require => false
   gem 'ci_reporter'
   gem 'minitest'
-  gem 'factory_girl_rails', :require => false
+  gem 'factory_girl_rails'
   gem 'turn'
   gem 'tconsole'
+  gem 'factory_girl_sequences'
 end
