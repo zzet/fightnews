@@ -12,9 +12,9 @@
     - @articles.each do |p|
       %tr
         %td= p.title
-        %td= p.short_description
+        %td= p.description
         %td= image_tag(p.photo.thumb.url) if p.photo?
-        %td= p.state_label
+        %td= p.state#_label
         %td
           = link_to edit_admin_article_path(p) do
             %i.icon-edit{:title => t(:edit)}

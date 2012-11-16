@@ -5,6 +5,7 @@
     %meta(name="viewport" content="width=device-width, initial-scale=1.0")
     %title= content_for?(:title) ? yield(:title) : "Authproviders"
     = csrf_meta_tags
+    = javascript_include_tag "application"
     / Le HTML5 shim, for IE6-8 support of HTML elements
     /[if lt IE 9]
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
@@ -82,4 +83,3 @@
     %section#main.column
       .span12= yield
     .spacer
-    = javascript_include_tag "application"

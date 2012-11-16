@@ -12,5 +12,5 @@
       .toolbar-item-name #{t(".items")}:
       .pagination
         %ul
-          - paginate_per_page_values.each do |v|
-            = paginate_per_page_item :li, v, url_for(params.merge(:page => 1, :per_page => v))
+        -#  - paginate_per_page_values.each do |v|
+        -#    = paginate_per_page_item :li, v, url_for(params.merge(:page => 1, :per_page => v))

@@ -11,7 +11,13 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
+//= require twitter/bootstrap
+//= require chosen-jquery
+//= require cocoon
+//= require ckeditor/init
+//= require js-routes
 //= web/admin/hideshow
 //= web/admin/tablesorter.min
 //= web/admin/equalHeight

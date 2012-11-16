@@ -10,5 +10,7 @@
  *
  *= web/admin/ie
  *= web/admin/layout
+ *= require bootstrap_and_overrides
+ *= require chosen
  *= require_self
  */

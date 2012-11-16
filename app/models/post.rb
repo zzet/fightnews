@@ -7,7 +7,8 @@ class Post < ActiveRecord::Base
                   :title,
                   :hot,
                   :state,
-                  :state_event
+                  :state_event,
+                  :category_ids, :tag_ids
 
   # TODO
   belongs_to :autor, class_name: User
