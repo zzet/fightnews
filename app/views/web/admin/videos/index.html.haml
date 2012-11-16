@@ -1,0 +1,24 @@
+/= render 'filter'
+%table.table.table-striped
+  %thead
+    %tr
+      - with_options :per_page => params[:per_page] do |c|
+        %th= c.sort_link @search, :title
+        %th= c.sort_link @search, :description
+        %th= Video.human_attribute_name('photo')
+        %th= c.sort_link @search, :state
+        %th= t(:control)
+  %tbody
+    - @videos.each do |p|
+      %tr
+        %td= p.title
+        %td= p.description
+        %td= image_tag(p.photo.thumb.url) if p.photo?
+        %td= p.state#_label
+        %td
+          = link_to edit_admin_video_path(p) do
+            %i.icon-edit{:title => t(:edit)}
+          = link_to admin_video_path(p), :data => {:method => :delete, :confirm => t(:sure)} do
+            %i.icon-remove{:title => t(:delete)}
+.form-actions
+  = render "web/admin/shared/toolbar", {:collection => @videos, :link_title => t(".add_video"), :link_path => new_admin_video_path}

@@ -1,0 +1,22 @@
+= simple_form_for @video, :url => url, :html => {:class => "form-horizontal"} do |f|
+  %legend= legend
+  .span7
+    = f.error_notification
+    = f.input :title
+    = f.input :description, :as => :ckeditor, :input_html => { :toolbar => 'Easy' }
+    = f.input :body, :as => :ckeditor, :input_html => { :toolbar => 'Full' }
+    = f.input :photo#, :as => :file
+    = f.association :categories#, as: :chosen
+    = f.association :tags#, as: :chosen
+    = f.input :source
+
+    .system
+      %legend= t('.system_options')
+      = f.input :state_event, :as => :state, :include_blank => @video.human_state_name
+      = f.input :hot#, :as => :file
+
+    .form-actions
+      = f.button :submit, :class => "btn btn-primary"
+      = link_to t(:cancel), admin_videos_path, :class => "btn"
+      - if @video.persisted?
+        = link_to t(".delete_video"), admin_video_path(@video), :data => {:method => :delete, :confirm => t(:sure)}, :class => "btn btn-danger"
