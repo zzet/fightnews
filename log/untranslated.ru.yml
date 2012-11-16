@@ -1,7 +1,14 @@
 ---
 ru:
-  index: ''
   title:
     base: ''
-  success: ''
-  new: ''
+  layouts:
+    web:
+      admin:
+        application:
+          dashboard: ''
+          index: ''
+          content: ''
+          news: ''
+          articles: ''
+  index: ''
