@@ -21,6 +21,7 @@ Fightnews::Application.routes.draw do
       resources :news
       resources :interviews
       resources :articles
+      resources :biographies
       resources :videos
       resources :posts
       resources :categories
