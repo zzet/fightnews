@@ -1,4 +1,4 @@
-class Video < Post
+class Video < ActiveRecord::Base
   attr_accessible :autor_id,
                   :body,
                   :description,
@@ -6,7 +6,24 @@ class Video < Post
                   :source,
                   :title,
                   :hot,
-                  :state
+                  :state,
+                  :state_event,
+                  :category_ids, :tag_ids
+
+  # TODO
+  belongs_to :autor, class_name: User
+  #validate :autor, presence: true
+
+  # TODO
+  #has_one :post_rating, dependent: :destroy
+
+  has_many :post_categories, dependent: :destroy, class_name: Post::Category
+  has_many :categories, through: :post_categories
+
+  has_many :post_tags, dependent: :destroy, class_name: Post::Tag
+  has_many :tags, through: :post_tags
+
+  mount_uploader :photo, VideoPhotoUploader
 
   state_machine :state, :initial => :unpublished do
     state :unpublished

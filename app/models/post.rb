@@ -23,8 +23,7 @@ class Post < ActiveRecord::Base
   has_many :post_tags, dependent: :destroy, class_name: Post::Tag
   has_many :tags, through: :post_tags
 
-  # TODO
-  #mount_uploader :photo, PhotoUploader
+  mount_uploader :photo, PostPhotoUploader
 
   state_machine :state, :initial => :unpublished do
     state :unpublished
