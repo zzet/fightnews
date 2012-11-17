@@ -15,15 +15,15 @@ class Biography < ActiveRecord::Base
   #validate :autor, presence: true
 
   # TODO
-  #has_one :post_rating, dependent: :destroy
+  #has_one :biography_rating, dependent: :destroy
 
-  has_many :post_categories, dependent: :destroy, class_name: Post::Category
-  has_many :categories, through: :post_categories
+  has_many :biography_categories, dependent: :destroy, class_name: Biography::Category
+  has_many :categories, through: :biography_categories
 
-  has_many :post_tags, dependent: :destroy, class_name: Post::Tag
-  has_many :tags, through: :post_tags
+  has_many :biography_tags, dependent: :destroy, class_name: Biography::Tag
+  has_many :tags, through: :biography_tags
 
-  mount_uploader :photo, BiographyPhotoUploader
+  mount_uploader :photo, PhotoUploader
 
   state_machine :state, :initial => :unpublished do
     state :unpublished

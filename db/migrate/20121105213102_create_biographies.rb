@@ -1,6 +1,6 @@
 class CreateBiographies < ActiveRecord::Migration
   def change
-    create_table :bigraphies do |t|
+    create_table :biographies do |t|
       t.string :title
       t.string :description
       t.string :body

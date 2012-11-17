@@ -15,15 +15,15 @@ class Video < ActiveRecord::Base
   #validate :autor, presence: true
 
   # TODO
-  #has_one :post_rating, dependent: :destroy
+  #has_one :video_rating, dependent: :destroy
 
-  has_many :post_categories, dependent: :destroy, class_name: Post::Category
-  has_many :categories, through: :post_categories
+  has_many :video_categories, dependent: :destroy, class_name: Video::Category
+  has_many :categories, through: :video_categories
 
-  has_many :post_tags, dependent: :destroy, class_name: Post::Tag
-  has_many :tags, through: :post_tags
+  has_many :video_tags, dependent: :destroy, class_name: Video::Tag
+  has_many :tags, through: :video_tags
 
-  mount_uploader :photo, VideoPhotoUploader
+  mount_uploader :photo, PhotoUploader
 
   state_machine :state, :initial => :unpublished do
     state :unpublished

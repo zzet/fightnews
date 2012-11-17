@@ -14,15 +14,15 @@ class Article <  ActiveRecord::Base
   #validate :autor, presence: true
 
   # TODO
-  #has_one :post_rating, dependent: :destroy
+  #has_one :article_rating, dependent: :destroy
 
-  has_many :post_categories, dependent: :destroy, class_name: Post::Category
-  has_many :categories, through: :post_categories
+  has_many :article_categories, dependent: :destroy, class_name: Article::Category
+  has_many :categories, through: :article_categories
 
-  has_many :post_tags, dependent: :destroy, class_name: Post::Tag
-  has_many :tags, through: :post_tags
+  has_many :article_tags, dependent: :destroy, class_name: Article::Tag
+  has_many :tags, through: :article_tags
 
-  mount_uploader :photo, ArticlePhotoUploader
+  mount_uploader :photo, PhotoUploader
 
   state_machine :state, :initial => :unpublished do
     state :unpublished

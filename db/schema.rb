@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
   end
 
   create_table "article_tags", :force => true do |t|
-    t.integer  "atricle_id"
+    t.integer  "article_id"
     t.integer  "tag_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "bigraphies", :force => true do |t|
+  create_table "biographies", :force => true do |t|
     t.string   "title"
     t.string   "description"
     t.string   "body"

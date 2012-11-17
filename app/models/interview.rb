@@ -15,15 +15,15 @@ class Interview < ActiveRecord::Base
   #validate :autor, presence: true
 
   # TODO
-  #has_one :post_rating, dependent: :destroy
+  #has_one :interview_rating, dependent: :destroy
 
-  has_many :post_categories, dependent: :destroy, class_name: Post::Category
-  has_many :categories, through: :post_categories
+  has_many :interview_categories, dependent: :destroy, class_name: Interview::Category
+  has_many :categories, through: :interview_categories
 
-  has_many :post_tags, dependent: :destroy, class_name: Post::Tag
-  has_many :tags, through: :post_tags
+  has_many :interview_tags, dependent: :destroy, class_name: Interview::Tag
+  has_many :tags, through: :interview_tags
 
-  mount_uploader :photo, InterviewPhotoUploader
+  mount_uploader :photo, PhotoUploader
 
   state_machine :state, :initial => :unpublished do
     state :unpublished
