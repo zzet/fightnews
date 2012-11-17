@@ -18,9 +18,10 @@ class Gallery < ActiveRecord::Base
   #has_one :gallery_rating, dependent: :destroy
 
   has_many :gallery_categories, dependent: :destroy, class_name: Gallery::Category
-  has_many :categories, through: :gallery_categories
-
   has_many :gallery_tags, dependent: :destroy, class_name: Gallery::Tag
+
+  has_many :images, dependent: :destroy
+  has_many :categories, through: :gallery_categories
   has_many :tags, through: :gallery_tags
 
   mount_uploader :photo, PhotoUploader
