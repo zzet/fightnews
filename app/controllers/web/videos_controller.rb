@@ -1,4 +1,4 @@
-class Web::VideosController < ApplicationController
+class Web::VideosController < Web::ApplicationController
   def index
   end
 

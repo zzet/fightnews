@@ -1,4 +1,4 @@
-class Web::InterviewsController < ApplicationController
+class Web::InterviewsController < Web::ApplicationController
   def index
   end
 

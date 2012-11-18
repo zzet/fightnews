@@ -13,4 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require_tree .
+//= require web/FF-cash
+//= require web/flashobject
+//= require web/hoverIntent
+//= require web/html5
+//= require web/jquery.easing.1.3
+//= require web/loopedslider
+//= require web/max-height
+//= require web/script
+//= require web/superfish
+//= require web/tabs
+//= require web/jquery.color
+//= require web/jquery.backgroundPosition

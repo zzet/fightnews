@@ -1,4 +1,4 @@
-!!! 5
+!!!
 %html(lang="en")
   %head
     %meta(charset="utf-8")
@@ -9,36 +9,428 @@
     /[if lt IE 9]
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:600", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:700", :rel => "stylesheet", :type => "text/css"}
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans", :rel => "stylesheet", :type => "text/css"}
     %link(href="images/favicon.ico" rel="shortcut icon")
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon")
     %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72")
     %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114")
-  %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand(href="#") Authproviders
-          .container.nav-collapse
-            %ul.nav
-          -#- if user_signed_in?
-          -#%li= link_to "#{current_user.username} (#{current_user.provider})", current_user.url
-          -#%li= link_to "Sign out", destroy_user_session_path, :method => :delete
-    .container
-      .content
-        .row
-          .span9
-            = yield
-          .span3
-            .well.sidebar-nav
-              %h3 Providers
-              %ul.nav.nav-list
-            -#    - if !user_signed_in?
-            -#%li= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook)
-            -#%li= link_to "Sign in with Vkontakte", user_omniauth_authorize_path(:vkontakte)
-    %footer
-      %p © Company 2012
-    = javascript_include_tag "application"
+    :javascript
+        $(document).ready(function() {
+          equalHeight($(".box-height"));
+        });
+    /[if lt IE 9]
+      <script type="text/javascript" src="js/html5.js"></script>
+      <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    /[if lt IE 8]
+      <div style=' clear: both; text-align:center; position: relative;'>
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+      <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+      </a>
+      </div>
+  %body#page1
+    .glow
+      .main
+        .main-shadow
+          / ==============================header=================================
+          %header
+            .row-top
+              .main-1
+                %h1
+                  %a{:href => "#"}
+                %ul.menu-top
+                  %li
+                    %a{:href => "#"} About
+                  %li
+                    %a{:href => "#"} Help
+                  %li
+                    %a{:href => "#"} FAQs
+                  %li
+                    %a{:href => "#"} Contacts
+                .search
+                  %form#search-form{:method => "get"}
+                    %fieldset
+                      .rowElem
+                        %input{:name => "text", :type => "text"}/
+                        %a.search-submit{:onClick => "document.getElementById('search-form').submit()"}
+                .clear
+            .row-nav
+              .glow-nav
+                .main
+                  %nav
+                    %ul.sf-menu
+                      %li.active
+                        %a{:href => "#"} Home
+                        %ul
+                          %li
+                            .sabmenu
+                              %h4 Informative
+                              %ul
+                                %li
+                                  %a{:href => "#"} Headlines
+                                %li
+                                  %a{:href => "#"} History
+                                %li
+                                  %a{:href => "#"} Columns
+                                %li
+                                  %a{:href => "#"} Interviews
+                                %li
+                                  %a{:href => "#"} Almanac
+                                %li
+                                  %a{:href => "#"} Schedule
+                                %li
+                                  %a{:href => "#"} Mixed Martial Arts
+                            .sabmenu
+                              %h4 Interactive
+                              %ul
+                                %li
+                                  %a{:href => "#"} Biofiles
+                                %li
+                                  %a{:href => "#"} Odds
+                                %li
+                                  %a{:href => "#"} Store
+                                %li
+                                  %a{:href => "#"} Videos
+                                %li
+                                  %a{:href => "#"} Book Reviews
+                                %li
+                                  %a{:href => "#"} Links
+                                %li
+                                  %a{:href => "#"} Training & Conditioning
+                            .sabmenu
+                              %h4 Interact With Us
+                              %ul
+                                %li
+                                  %a{:href => "#"} Facebook
+                                %li
+                                  %a{:href => "#"} Twitter
+                                %li
+                                  %a{:href => "#"} Flickr
+                                %li
+                                  %a{:href => "#"} RSS Feed
+                                %li
+                                  %a{:href => "#"} Contact Us
+                            .sabmenu
+                              %h4 Boxing In Depth
+                              %ul
+                                %li
+                                  %a{:href => "#"} Labore et dolore
+                                %li
+                                  %a{:href => "#"} Magna aliqua
+                                %li
+                                  %a{:href => "#"} Ut enim ad minim
+                                %li
+                                  %a{:href => "#"} Veniam
+                                %li
+                                  %a{:href => "#"} Quis nostrud
+                                %li
+                                  %a{:href => "#"} Exercitation ullamco
+                            .clear
+                      %li
+                        %a{:href => "#"} News
+                      %li
+                        %a{:href => "#"} Ringside
+                      %li
+                        %a{:href => "#"} World Champions
+                      %li
+                        %a{:href => "#"} Experts
+                      %li.last
+                        %a{:href => "#"} Photos
+                  .clear
+          / content
+          %section#content
+            .container_12
+              %article.grid_8
+                #video
+                  #loopedSlider
+                    .container1
+                      .slides
+                        .slide
+                          #flash1
+                            .aligncenter
+                              %a{:href => "http://www.adobe.com/go/EN_US-H-GET-FLASH"}
+                                %img{:alt => "", :src => "http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png"}/
+                          :javascript
+                            var fo = new FlashObject("http://www.youtube.com/v/2kodXWejuy0?version=3&hl=en_EN", "flash1", "620", "378", "8", "");
+                            fo.addParam("quality", "high");
+                            fo.addParam("allowFullScreen", "true");
+                            fo.addParam("flashvars", "colorTheme=gray");
+                            fo.addParam("wmode", "opaque");
+                            fo.write("flash1");
+                        .slide
+                          #flash2
+                            .aligncenter
+                              %a{:href => "http://www.adobe.com/go/EN_US-H-GET-FLASH"}
+                                %img{:alt => "", :src => "http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png"}/
+                          :javascript
+                            var fo = new FlashObject("http://www.youtube.com/v/wAachrYkS0Y?version=3&hl=en_EN", "flash2", "620", "378", "8", "");
+                            fo.addParam("quality", "high");
+                            fo.addParam("allowFullScreen", "true");
+                            fo.addParam("flashvars", "colorTheme=gray");
+                            fo.addParam("wmode", "opaque");
+                            fo.write("flash2");
+                        .slide
+                          #flash3
+                            .aligncenter
+                              %a{:href => "http://www.adobe.com/go/EN_US-H-GET-FLASH"}
+                                %img{:alt => "", :src => "http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png"}/
+                          :javascript
+                            var fo = new FlashObject("http://www.youtube.com/v/I7twdJFviRs?version=3&hl=en_EN", "flash3", "620", "378", "8", "");
+                            fo.addParam("quality", "high");
+                            fo.addParam("allowFullScreen", "true");
+                            fo.addParam("flashvars", "colorTheme=gray");
+                            fo.addParam("wmode", "opaque");
+                            fo.write("flash3");
+                        .slide
+                          #flash4
+                            .aligncenter
+                              %a{:href => "http://www.adobe.com/go/EN_US-H-GET-FLASH"}
+                                %img{:alt => "", :src => "http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png"}/
+                          :javascript
+                            var fo = new FlashObject("http://www.youtube.com/v/3ftOEHhFFNU?version=3&hl=en_EN", "flash4", "620", "378", "8", "");
+                            fo.addParam("quality", "high");
+                            fo.addParam("allowFullScreen", "true");
+                            fo.addParam("flashvars", "colorTheme=gray");
+                            fo.addParam("wmode", "opaque");
+                            fo.write("flash4");
+                    %ul.pagination
+                      %li
+                        %a{"data-href" => "0", :href => "#"}
+                          .d-block
+                            .date 15 dec, 2012
+                          %span Lorem ipsum dolor sit amet conse ctetur
+                      %li
+                        %a{"data-href" => "1", :href => "#"}
+                          .d-block
+                            .date 15 dec, 2012
+                          %span dolor sit amet conse ctetur adipisicing
+                      %li
+                        %a{"data-href" => "2", :href => "#"}
+                          .d-block
+                            .date 15 dec, 2012
+                          %span Conse adipisicing elit, sed do eiusmod
+                      %li.last
+                        %a{"data-href" => "3", :href => "#"}
+                          .d-block
+                            .date 15 dec, 2012
+                          %span adipisicing elit, sed do eiusmod tempor
+                .tabs
+                  %ul.tabs-nav
+                    %li.selected
+                      %a.first{:href => "#tabs-1"} Latest news
+                    %li.last
+                      %a{:href => "#tabs-2"} Top news
+                  %a.btn-1{:href => "#"} See all
+                  #tabs-1.tab-content
+                    %section
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img1.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Lorem ipsum dolor sit amet conse ctetur...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %section.a
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img2.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Ipsum dolor sit amet conse ctetur...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %section.b
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img3.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Excepteur sint occaecat cupidatat non...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %section
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img4.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Sint occaecat cupidatat non proident sunt in...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %section
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img5.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Dolor sit amet conse ctetur...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  #tabs-2.tab-content
+                    %section
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img5.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Dolor sit amet conse ctetur...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %section.a
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img4.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Sint occaecat cupidatat non proident sunt in...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %section.b
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img3.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Excepteur sint occaecat cupidatat non...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %section
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img2.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Ipsum dolor sit amet conse ctetur...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    %section
+                      %figure.img-indent
+                        %img{:alt => "", :src => "images/page1-img1.jpg"}/
+                      .overflow
+                        .d-block
+                          .date 15 dec, 2012
+                        %a{:href => "#"} Lorem ipsum dolor sit amet conse ctetur...
+                        %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              %article.grid_4
+                %figure.m1
+                  %a{:href => "#"}
+                    %img{:alt => "", :src => "images/banner-1.jpg"}/
+                .bg-h3.overflow
+                  %h3 Latest REVIEW
+                  %a.btn-1{:href => "#"} See all
+                .block-1
+                  %span 15 dec, 2012
+                  %figure
+                    %img{:alt => "", :src => "images/page1-img6.jpg"}/
+                  %a.link-1{:href => "#"}
+                    Lorem ipsum dolor sit amet
+                    conse ctetur
+                  %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.
+                  .comments
+                    %span 4 comments
+                  %a.link-2{:href => "#"} Read more
+                  .clear
+                .bg-h3
+                  %h3 PRESS RELEASES
+                  %a.btn-1{:href => "#"} See all
+                .block-2
+                  %ul.list-1
+                    %li
+                      %a{:href => "#"} Lorem ipsum dolor sit amet conse...
+                      %p
+                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                        %a{:href => "#"}
+                    %li
+                      %a{:href => "#"} Dolor sit amet conse...
+                      %p
+                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                        %a{:href => "#"}
+                    %li
+                      %a{:href => "#"} Ipsum dolor sit amet conse...
+                      %p
+                        Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+                        %a{:href => "#"}
+              .clear
+        / footer
+        .main
+          %footer
+            .container_12
+              %article.grid_2
+                .border.box-height
+                  %h4 Informative
+                  %ul.list-footer
+                    %li
+                      %a{:href => "#"} Headlines
+                    %li
+                      %a{:href => "#"} History
+                    %li
+                      %a{:href => "#"} Columns
+                    %li
+                      %a{:href => "#"} Interviews
+                    %li
+                      %a{:href => "#"} Almanac
+                    %li
+                      %a{:href => "#"} Schedule
+                    %li
+                      %a{:href => "#"} Mixed Martial Arts
+              %article.grid_2
+                .border.box-height
+                  %h4 Interactive
+                  %ul.list-footer
+                    %li
+                      %a{:href => "#"} Biofiles
+                    %li
+                      %a{:href => "#"} Odds
+                    %li
+                      %a{:href => "#"} Store
+                    %li
+                      %a{:href => "#"} Videos
+                    %li
+                      %a{:href => "#"} Book Reviews
+                    %li
+                      %a{:href => "#"} Links
+                    %li
+                      %a{:href => "#"} Training & Conditioning
+              %article.grid_2
+                .border.box-height
+                  %h4 Interact With Us
+                  %ul.list-footer
+                    %li
+                      %a{:href => "#"} Facebook
+                    %li
+                      %a{:href => "#"} Twitter
+                    %li
+                      %a{:href => "#"} Flickr
+                    %li
+                      %a{:href => "#"} RSS Feed
+                    %li
+                      %a{:href => "#"} Contact Us
+              %article.grid_2
+                .border.box-height
+                  %h4 Boxing In Depth
+                  %ul.list-footer
+                    %li
+                      %a{:href => "#"} Labore et dolore
+                    %li
+                      %a{:href => "#"} Magna aliqua
+                    %li
+                      %a{:href => "#"} Ut enim ad minim
+                    %li
+                      %a{:href => "#"} Veniam
+                    %li
+                      %a{:href => "#"} Quis nostrud
+                    %li
+                      %a{:href => "#"} Exercitation ullamco
+              %article.grid_3.prefix_1
+                %figure.d-block.alignright.p5
+                  %a{:href => "#"}
+                    %img{:alt => "", :src => "images/logo-footer.png "}/
+                .policy.d-block.alignright
+                  Boxing © 2012 
+                  %a{:href => "#"} Privacy Policy
+                  .d-block.alignright
+                    / {%FOOTER_LINK}
+              .clear
+    :javascript
+      $(function(){
+      	// Option set as a global variable
+      	$('#loopedSlider').loopedSlider({
+      		autoStart: 0,
+      		hoverPause: true,
+      		containerClick:false
+      	});
+      });

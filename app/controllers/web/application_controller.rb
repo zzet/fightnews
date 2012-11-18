@@ -1,4 +1,7 @@
 class Web::ApplicationController < ApplicationController
+
+  layout 'web/application'
+
   include BreadcrumbsHelper
 
   before_filter :base_title
