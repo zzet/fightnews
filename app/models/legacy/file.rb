@@ -1,4 +1,4 @@
-class Legacy::File < ActiveRecord::Base
+class Legacy::File < LegacyDb
   set_primary_key :fid
 
   # Relationships

@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldDescription < ActiveRecord::Base
+class Legacy::FieldDataFieldDescription < LegacyDb
   set_table_name  :field_data_field_description
   set_primary_key :no_primary_key
 

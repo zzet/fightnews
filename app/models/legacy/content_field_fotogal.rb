@@ -1,4 +1,4 @@
-class Legacy::ContentFieldFotogal < ActiveRecord::Base
+class Legacy::ContentFieldFotogal < LegacyDb
   set_table_name  :content_field_fotogal
   set_primary_key :no_primary_key
 

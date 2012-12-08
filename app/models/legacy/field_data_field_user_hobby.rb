@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldUserHobby < ActiveRecord::Base
+class Legacy::FieldDataFieldUserHobby < LegacyDb
   set_table_name  :field_data_field_user_hobby
   set_primary_key :no_primary_key
 

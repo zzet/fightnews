@@ -1,4 +1,4 @@
-class Legacy::RolePermission < ActiveRecord::Base
+class Legacy::RolePermission < LegacyDb
   set_table_name  :role_permission
   set_primary_key :no_primary_key
 

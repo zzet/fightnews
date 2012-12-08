@@ -1,4 +1,4 @@
-class Legacy::BanUser < ActiveRecord::Base
+class Legacy::BanUser < LegacyDb
   set_table_name  :ban_user
   set_primary_key :bid
 

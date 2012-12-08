@@ -1,4 +1,4 @@
-class Legacy::PmMessage < ActiveRecord::Base
+class Legacy::PmMessage < LegacyDb
   set_table_name  :pm_message
   set_primary_key :mid
 

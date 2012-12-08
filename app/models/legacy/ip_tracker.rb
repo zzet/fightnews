@@ -1,4 +1,4 @@
-class Legacy::IpTracker < ActiveRecord::Base
+class Legacy::IpTracker < LegacyDb
   set_table_name  :ip_tracker
   set_primary_key :no_primary_key
 

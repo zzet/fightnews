@@ -1,4 +1,4 @@
-class Legacy::UrlAlias < ActiveRecord::Base
+class Legacy::UrlAlias < LegacyDb
   set_table_name  :url_alias
   set_primary_key :pid
 

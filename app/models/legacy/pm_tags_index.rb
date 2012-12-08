@@ -1,4 +1,4 @@
-class Legacy::PmTagsIndex < ActiveRecord::Base
+class Legacy::PmTagsIndex < LegacyDb
   set_table_name  :pm_tags_index
   set_primary_key :no_primary_key
 

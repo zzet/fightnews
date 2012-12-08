@@ -1,4 +1,4 @@
-class Legacy::InviteNotification < ActiveRecord::Base
+class Legacy::InviteNotification < LegacyDb
   set_primary_key :no_primary_key
 
   # Relationships

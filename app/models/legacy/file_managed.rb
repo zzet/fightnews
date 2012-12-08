@@ -1,4 +1,4 @@
-class Legacy::FileManaged < ActiveRecord::Base
+class Legacy::FileManaged < LegacyDb
   set_table_name  :file_managed
   set_primary_key :fid
 

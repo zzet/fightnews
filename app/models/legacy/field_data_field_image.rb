@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldImage < ActiveRecord::Base
+class Legacy::FieldDataFieldImage < LegacyDb
   set_table_name  :field_data_field_image
   set_primary_key :no_primary_key
 

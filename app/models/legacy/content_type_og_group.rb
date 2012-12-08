@@ -1,4 +1,4 @@
-class Legacy::ContentTypeOgGroup < ActiveRecord::Base
+class Legacy::ContentTypeOgGroup < LegacyDb
   set_table_name  :content_type_og_group
   set_primary_key :vid
 

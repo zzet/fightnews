@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldUserBoxer < ActiveRecord::Base
+class Legacy::FieldDataFieldUserBoxer < LegacyDb
   set_primary_key :no_primary_key
 
   # Relationships

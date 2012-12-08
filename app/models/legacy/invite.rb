@@ -1,4 +1,4 @@
-class Legacy::Invite < ActiveRecord::Base
+class Legacy::Invite < LegacyDb
   set_table_name  :invite
   set_primary_key :no_primary_key
 

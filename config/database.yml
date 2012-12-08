@@ -27,3 +27,36 @@ production:
   host: 127.0.0.1
   username: zzet
   password: jphQQkEHKP
+
+legacy_development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: my_db
+  pool: 5
+  username: fn
+  password: 123456qwerty23
+  host: keephost.ru
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+legacy_test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: test_legacy_test
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock
+
+legacy_production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: test_legacy_production
+  pool: 5
+  username: root
+  password:
+  socket: /tmp/mysql.sock

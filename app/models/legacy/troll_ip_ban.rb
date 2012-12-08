@@ -1,4 +1,4 @@
-class Legacy::TrollIpBan < ActiveRecord::Base
+class Legacy::TrollIpBan < LegacyDb
   set_table_name  :troll_ip_ban
   set_primary_key :iid
 

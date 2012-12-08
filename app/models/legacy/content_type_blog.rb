@@ -1,4 +1,4 @@
-class Legacy::ContentTypeBlog < ActiveRecord::Base
+class Legacy::ContentTypeBlog < LegacyDb
   set_table_name  :content_type_blog
   set_primary_key :vid
 

@@ -1,4 +1,4 @@
-class Legacy::TrollIpTrack < ActiveRecord::Base
+class Legacy::TrollIpTrack < LegacyDb
   set_table_name  :troll_ip_track
   set_primary_key :no_primary_key
 

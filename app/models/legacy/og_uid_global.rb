@@ -1,4 +1,4 @@
-class Legacy::OgUidGlobal < ActiveRecord::Base
+class Legacy::OgUidGlobal < LegacyDb
   set_table_name  :og_uid_global
   set_primary_key :uid
 

@@ -1,4 +1,4 @@
-class Legacy::FileUsage < ActiveRecord::Base
+class Legacy::FileUsage < LegacyDb
   set_table_name  :file_usage
   set_primary_key :no_primary_key
 

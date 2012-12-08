@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldUserName < ActiveRecord::Base
+class Legacy::FieldDataFieldUserName < LegacyDb
   set_table_name  :field_data_field_user_name
   set_primary_key :no_primary_key
 

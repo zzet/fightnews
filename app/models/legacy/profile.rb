@@ -1,4 +1,4 @@
-class Legacy::Profile < ActiveRecord::Base
+class Legacy::Profile < LegacyDb
   set_table_name  :profile
   set_primary_key :pid
 

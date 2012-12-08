@@ -1,4 +1,4 @@
-class Legacy::TrollWhitelist < ActiveRecord::Base
+class Legacy::TrollWhitelist < LegacyDb
   set_table_name  :troll_whitelist
   set_primary_key :no_primary_key
 

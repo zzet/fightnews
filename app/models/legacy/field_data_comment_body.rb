@@ -1,4 +1,4 @@
-class Legacy::FieldDataCommentBody < ActiveRecord::Base
+class Legacy::FieldDataCommentBody < LegacyDb
   set_table_name  :field_data_comment_body
   set_primary_key :no_primary_key
 

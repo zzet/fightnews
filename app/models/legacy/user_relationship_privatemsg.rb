@@ -1,4 +1,4 @@
-class Legacy::UserRelationshipPrivatemsg < ActiveRecord::Base
+class Legacy::UserRelationshipPrivatemsg < LegacyDb
   set_table_name  :user_relationship_privatemsg
   set_primary_key :urpid
 

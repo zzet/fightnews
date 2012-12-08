@@ -1,4 +1,4 @@
-class Legacy::BlockedIp < ActiveRecord::Base
+class Legacy::BlockedIp < LegacyDb
   set_primary_key :iid
 
   # Relationships

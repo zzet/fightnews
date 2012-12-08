@@ -1,4 +1,4 @@
-class Legacy::UserRelationshipType < ActiveRecord::Base
+class Legacy::UserRelationshipType < LegacyDb
   set_primary_key :rtid
 
   # Relationships

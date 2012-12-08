@@ -1,4 +1,4 @@
-class Legacy::FieldDataTaxonomyextra < ActiveRecord::Base
+class Legacy::FieldDataTaxonomyextra < LegacyDb
   set_table_name  :field_data_taxonomyextra
   set_primary_key :no_primary_key
 

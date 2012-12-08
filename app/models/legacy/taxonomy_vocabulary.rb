@@ -1,4 +1,4 @@
-class Legacy::TaxonomyVocabulary < ActiveRecord::Base
+class Legacy::TaxonomyVocabulary < LegacyDb
   set_table_name  :taxonomy_vocabulary
   set_primary_key :vid
 

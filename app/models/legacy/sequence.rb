@@ -1,4 +1,4 @@
-class Legacy::Sequence < ActiveRecord::Base
+class Legacy::Sequence < LegacyDb
   set_primary_key :value
 
   # Relationships

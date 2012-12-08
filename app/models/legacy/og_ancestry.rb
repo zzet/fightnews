@@ -1,4 +1,4 @@
-class Legacy::OgAncestry < ActiveRecord::Base
+class Legacy::OgAncestry < LegacyDb
   set_table_name  :og_ancestry
   set_primary_key :no_primary_key
 

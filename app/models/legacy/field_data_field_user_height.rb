@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldUserHeight < ActiveRecord::Base
+class Legacy::FieldDataFieldUserHeight < LegacyDb
   set_table_name  :field_data_field_user_height
   set_primary_key :no_primary_key
 

@@ -1,4 +1,4 @@
-class Legacy::PmBlockUser < ActiveRecord::Base
+class Legacy::PmBlockUser < LegacyDb
   set_table_name  :pm_block_user
   set_primary_key :no_primary_key
 

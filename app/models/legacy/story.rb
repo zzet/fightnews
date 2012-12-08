@@ -1,4 +1,4 @@
-class Legacy::Story < ActiveRecord::Base
+class Legacy::Story < LegacyDb
   set_table_name  :node
   set_primary_key :nid
 

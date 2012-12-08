@@ -1,4 +1,4 @@
-class Legacy::TaxonomyTermSynonym < ActiveRecord::Base
+class Legacy::TaxonomyTermSynonym < LegacyDb
   set_table_name  :taxonomy_term_synonym
   set_primary_key :tsid
 

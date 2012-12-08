@@ -1,4 +1,4 @@
-class Legacy::ProfileType < ActiveRecord::Base
+class Legacy::ProfileType < LegacyDb
   set_table_name  :profile_type
 
   # Relationships

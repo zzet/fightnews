@@ -1,4 +1,4 @@
-class Legacy::Nodeword < ActiveRecord::Base
+class Legacy::Nodeword < LegacyDb
   set_primary_key :no_primary_key
 
   # Relationships

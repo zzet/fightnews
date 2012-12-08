@@ -1,4 +1,4 @@
-class Legacy::User < ActiveRecord::Base
+class Legacy::User < LegacyDb
   set_primary_key :uid
 
   # Relationships

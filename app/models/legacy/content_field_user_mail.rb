@@ -1,4 +1,4 @@
-class ContentFieldUserMail < ActiveRecord::Base
+class ContentFieldUserMail < LegacyDb
   set_table_name  :content_field_user_mail
   set_primary_key :no_primary_key
 

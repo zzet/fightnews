@@ -1,4 +1,4 @@
-class Legacy::PollVote < ActiveRecord::Base
+class Legacy::PollVote < LegacyDb
   set_table_name  :poll_vote
   set_primary_key :no_primary_key
 

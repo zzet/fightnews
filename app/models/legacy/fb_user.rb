@@ -1,4 +1,4 @@
-class Legacy::FbUser < ActiveRecord::Base
+class Legacy::FbUser < LegacyDb
   set_table_name  :fb_user
   set_primary_key :uid
 

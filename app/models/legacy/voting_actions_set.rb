@@ -1,4 +1,4 @@
-class Legacy::VotingActionsSet < ActiveRecord::Base
+class Legacy::VotingActionsSet < LegacyDb
   set_table_name  :voting_actions_set
   set_primary_key :vasid
 

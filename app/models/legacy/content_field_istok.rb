@@ -1,4 +1,4 @@
-class Legacy::ContentFieldIstok < ActiveRecord::Base
+class Legacy::ContentFieldIstok < LegacyDb
   set_table_name  :content_field_istok
   set_primary_key :vid
 

@@ -1,4 +1,4 @@
-class Legacy::ContentTypeProfile < ActiveRecord::Base
+class Legacy::ContentTypeProfile < LegacyDb
   set_table_name  :content_type_profile
   set_primary_key :vid
 

@@ -1,4 +1,4 @@
-class Legacy::FieldDataUpload < ActiveRecord::Base
+class Legacy::FieldDataUpload < LegacyDb
   set_table_name  :field_data_upload
   set_primary_key :no_primary_key
 

@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldUserPhoto < ActiveRecord::Base
+class Legacy::FieldDataFieldUserPhoto < LegacyDb
   set_table_name  :field_data_field_user_photo
   set_primary_key :no_primary_key
 

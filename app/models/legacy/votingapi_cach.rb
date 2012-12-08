@@ -1,4 +1,4 @@
-class Legacy::VotingapiCach < ActiveRecord::Base
+class Legacy::VotingapiCach < LegacyDb
   set_table_name  :votingapi_cache
   set_primary_key :vote_cache_id
 

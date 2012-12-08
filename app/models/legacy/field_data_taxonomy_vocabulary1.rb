@@ -1,4 +1,4 @@
-class Legacy::FieldDataTaxonomyVocabulary1 < ActiveRecord::Base
+class Legacy::FieldDataTaxonomyVocabulary1 < LegacyDb
   set_table_name  :field_data_taxonomy_vocabulary_1
   set_primary_key :no_primary_key
 

@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldUserBiography < ActiveRecord::Base
+class Legacy::FieldDataFieldUserBiography < LegacyDb
   set_table_name  :field_data_field_user_biography
   set_primary_key :no_primary_key
 

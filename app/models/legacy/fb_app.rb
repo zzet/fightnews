@@ -1,4 +1,4 @@
-class Legacy::FbApp < ActiveRecord::Base
+class Legacy::FbApp < LegacyDb
   set_table_name  :fb_app
   set_primary_key :fba_id
 

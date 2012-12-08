@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldUserCountry < ActiveRecord::Base
+class Legacy::FieldDataFieldUserCountry < LegacyDb
   set_table_name  :field_data_field_user_country
   set_primary_key :no_primary_key
 

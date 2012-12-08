@@ -1,4 +1,4 @@
-class Legacy::CommentNotifyUserSetting < ActiveRecord::Base
+class Legacy::CommentNotifyUserSetting < LegacyDb
   set_primary_key :uid
 
   # Relationships

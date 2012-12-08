@@ -1,4 +1,4 @@
-class Legacy::ContentFieldPhoto < ActiveRecord::Base
+class Legacy::ContentFieldPhoto < LegacyDb
   set_table_name  :content_field_photo
   set_primary_key :vid
 

@@ -1,4 +1,4 @@
-class Legacy::Poll < ActiveRecord::Base
+class Legacy::Poll < LegacyDb
   set_table_name  :poll
   set_primary_key :nid
 

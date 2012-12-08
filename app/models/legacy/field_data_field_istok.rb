@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldIstok < ActiveRecord::Base
+class Legacy::FieldDataFieldIstok < LegacyDb
   set_table_name  :field_data_field_istok
   set_primary_key :no_primary_key
 

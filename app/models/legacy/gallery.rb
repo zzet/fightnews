@@ -1,4 +1,4 @@
-class Legacy::Gallery < ActiveRecord::Base
+class Legacy::Gallery < LegacyDb
   set_table_name  :node
   set_primary_key :nid
 

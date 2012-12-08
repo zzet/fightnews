@@ -1,4 +1,4 @@
-class Legacy::Video < ActiveRecord::Base
+class Legacy::Video < LegacyDb
   set_table_name  :node
   set_primary_key :nid
 

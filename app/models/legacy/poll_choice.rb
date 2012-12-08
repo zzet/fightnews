@@ -1,4 +1,4 @@
-class Legacy::PollChoice < ActiveRecord::Base
+class Legacy::PollChoice < LegacyDb
   set_table_name  :poll_choice
   set_primary_key :chid
 

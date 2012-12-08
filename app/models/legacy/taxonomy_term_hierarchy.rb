@@ -1,4 +1,4 @@
-class Legacy::TaxonomyTermHierarchy < ActiveRecord::Base
+class Legacy::TaxonomyTermHierarchy < LegacyDb
   set_table_name  :taxonomy_term_hierarchy
   set_primary_key :no_primary_key
 

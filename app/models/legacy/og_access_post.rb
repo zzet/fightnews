@@ -1,4 +1,4 @@
-class Legacy::OgAccessPost < ActiveRecord::Base
+class Legacy::OgAccessPost < LegacyDb
   set_table_name  :og_access_post
   set_primary_key :nid
 

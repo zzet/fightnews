@@ -1,4 +1,4 @@
-class Legacy::Og < ActiveRecord::Base
+class Legacy::Og < LegacyDb
   set_table_name  :og
   set_primary_key :nid
 

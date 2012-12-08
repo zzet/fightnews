@@ -1,4 +1,4 @@
-class Legacy::VotingActionsCondition < ActiveRecord::Base
+class Legacy::VotingActionsCondition < LegacyDb
   set_table_name  :voting_actions_condition
   set_primary_key :vacid
 

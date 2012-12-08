@@ -1,4 +1,4 @@
-class Legacy::UserRelationshipsUiSetting < ActiveRecord::Base
+class Legacy::UserRelationshipsUiSetting < LegacyDb
   set_primary_key :no_primary_key
 
   # Relationships

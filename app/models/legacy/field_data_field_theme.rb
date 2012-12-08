@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldTheme < ActiveRecord::Base
+class Legacy::FieldDataFieldTheme < LegacyDb
   set_table_name  :field_data_field_theme
   set_primary_key :no_primary_key
 

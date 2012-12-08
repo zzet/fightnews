@@ -1,4 +1,4 @@
-class Legacy::ContentTypeStory < ActiveRecord::Base
+class Legacy::ContentTypeStory < LegacyDb
   set_table_name  :content_type_story
   set_primary_key :vid
 

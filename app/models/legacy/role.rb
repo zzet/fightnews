@@ -1,4 +1,4 @@
-class Legacy::Role < ActiveRecord::Base
+class Legacy::Role < LegacyDb
   set_table_name  :role
   set_primary_key :rid
 

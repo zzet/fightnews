@@ -1,4 +1,4 @@
-class Legacy::IpRange < ActiveRecord::Base
+class Legacy::IpRange < LegacyDb
   set_primary_key :bid
 
   # Relationships

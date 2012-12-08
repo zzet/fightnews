@@ -1,4 +1,4 @@
-class Legacy::Interest < ActiveRecord::Base
+class Legacy::Interest < LegacyDb
   set_primary_key :no_primary_key
 
   # Relationships

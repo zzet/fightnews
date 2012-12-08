@@ -1,4 +1,4 @@
-class Legacy::PmTag < ActiveRecord::Base
+class Legacy::PmTag < LegacyDb
   set_primary_key :tag_id
 
   # Relationships

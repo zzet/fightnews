@@ -1,4 +1,4 @@
-class Legacy::VotingapiActionCondition < ActiveRecord::Base
+class Legacy::VotingapiActionCondition < LegacyDb
   set_table_name  :votingapi_action_condition
   set_primary_key :name
 

@@ -1,4 +1,4 @@
-class Legacy::VotingActionsAction < ActiveRecord::Base
+class Legacy::VotingActionsAction < LegacyDb
   set_table_name  :voting_actions_action
   set_primary_key :no_primary_key
 

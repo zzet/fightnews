@@ -1,4 +1,4 @@
-class Legacy::IpPost < ActiveRecord::Base
+class Legacy::IpPost < LegacyDb
   set_primary_key :no_primary_key
 
   # Relationships

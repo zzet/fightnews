@@ -1,4 +1,4 @@
-class Legacy::FalseAccount < ActiveRecord::Base
+class Legacy::FalseAccount < LegacyDb
   set_primary_key :no_primary_key
 
   # Relationships

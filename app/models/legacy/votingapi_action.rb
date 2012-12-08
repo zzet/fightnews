@@ -1,4 +1,4 @@
-class Legacy::VotingapiAction < ActiveRecord::Base
+class Legacy::VotingapiAction < LegacyDb
   set_table_name  :votingapi_action
   set_primary_key :no_primary_key
 

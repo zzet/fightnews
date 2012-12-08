@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldBirthday < ActiveRecord::Base
+class Legacy::FieldDataFieldBirthday < LegacyDb
   set_table_name  :field_data_field_birthday
   set_primary_key :no_primary_key
 

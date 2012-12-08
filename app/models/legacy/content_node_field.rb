@@ -1,4 +1,4 @@
-class Legacy::ContentNodeField < ActiveRecord::Base
+class Legacy::ContentNodeField < LegacyDb
   set_table_name  :content_node_field
   set_primary_key :field_name
 

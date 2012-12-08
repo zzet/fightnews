@@ -1,4 +1,4 @@
-class Legacy::FieldDataFieldUserTown < ActiveRecord::Base
+class Legacy::FieldDataFieldUserTown < LegacyDb
   set_table_name  :field_data_field_user_town
   set_primary_key :no_primary_key
 

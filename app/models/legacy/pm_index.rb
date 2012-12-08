@@ -1,4 +1,4 @@
-class Legacy::PmIndex < ActiveRecord::Base
+class Legacy::PmIndex < LegacyDb
   set_table_name  :pm_index
   set_primary_key :no_primary_key
 

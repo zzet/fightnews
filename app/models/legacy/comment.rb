@@ -1,4 +1,4 @@
-class Legacy::Comment < ActiveRecord::Base
+class Legacy::Comment < LegacyDb
   set_table_name  :comment
   set_primary_key :cid
 

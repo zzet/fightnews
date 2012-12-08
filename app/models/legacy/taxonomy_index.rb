@@ -1,4 +1,4 @@
-class Legacy::TaxonomyIndex < ActiveRecord::Base
+class Legacy::TaxonomyIndex < LegacyDb
   set_table_name  :taxonomy_index
   set_primary_key :no_primary_key
 

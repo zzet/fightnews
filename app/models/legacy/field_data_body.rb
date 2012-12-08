@@ -1,4 +1,4 @@
-class Legacy::FieldDataBody < ActiveRecord::Base
+class Legacy::FieldDataBody < LegacyDb
   set_table_name  :field_data_body
   set_primary_key :no_primary_key
 

@@ -1,4 +1,4 @@
-class Legacy::NodeAccess < ActiveRecord::Base
+class Legacy::NodeAccess < LegacyDb
   set_table_name  :node_access
   set_primary_key :no_primary_key
 

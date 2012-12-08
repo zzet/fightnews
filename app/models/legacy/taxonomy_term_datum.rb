@@ -1,4 +1,4 @@
-class Legacy::TaxonomyTermDatum < ActiveRecord::Base
+class Legacy::TaxonomyTermDatum < LegacyDb
   set_primary_key :tid
 
   # Relationships

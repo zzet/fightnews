@@ -1,4 +1,4 @@
-class Legacy::Usernode < ActiveRecord::Base
+class Legacy::Usernode < LegacyDb
   set_table_name  :usernode
   set_primary_key :no_primary_key
 

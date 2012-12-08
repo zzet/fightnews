@@ -1,4 +1,4 @@
-class Legacy::Blog < ActiveRecord::Base
+class Legacy::Blog < LegacyDb
   set_table_name  :node
   set_primary_key :nid
 

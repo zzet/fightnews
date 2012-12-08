@@ -1,4 +1,4 @@
-class Legacy::PmEmailNotify < ActiveRecord::Base
+class Legacy::PmEmailNotify < LegacyDb
   set_table_name  :pm_email_notify
   set_primary_key :no_primary_key
 

@@ -1,4 +1,4 @@
-class Legacy::ContentTypePhotogallery < ActiveRecord::Base
+class Legacy::ContentTypePhotogallery < LegacyDb
   set_table_name  :content_type_photogallery
   set_primary_key :vid
 
