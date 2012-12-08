@@ -39,11 +39,14 @@ gem 'untranslated', :git => 'https://github.com/Heimdell/untranslated.git'
 
 gem 'blankslate'
 
+gem 'countries'
+gem 'ipgeobase'
+
 # users
-gem 'devise'
-gem 'omniauth'
-gem 'omniauth-facebook'
-gem 'omniauth-vkontakte'
+#gem 'devise'
+#gem 'omniauth'
+#gem 'omniauth-facebook'
+#gem 'omniauth-vkontakte'
 
 group :assets do
   gem 'sass-rails'
