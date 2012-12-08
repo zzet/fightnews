@@ -1,4 +1,4 @@
-class Ckeditor::Asset < ActiveRecord::Base
+class Ckeditor::Asset < NewDb
   include Ckeditor::Orm::ActiveRecord::AssetBase
               
   delegate :url, :current_path, :size, :content_type, :filename, :to => :data

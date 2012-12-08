@@ -1,4 +1,4 @@
-class User::Person < ActiveRecord::Base
+class User::Person < NewDb
   attr_accessible :biography_id,
                   :position,
                   :profile_id

@@ -1,4 +1,4 @@
-class Biography::Category < ActiveRecord::Base
+class Biography::Category < NewDb
   attr_accessible :biography_id, :category_id
 
   belongs_to :biography

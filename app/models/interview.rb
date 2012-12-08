@@ -1,4 +1,4 @@
-class Interview < ActiveRecord::Base
+class Interview < NewDb
   attr_accessible :autor_id,
                   :body,
                   :description,

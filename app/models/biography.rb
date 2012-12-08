@@ -1,4 +1,4 @@
-class Biography < ActiveRecord::Base
+class Biography < NewDb
   attr_accessible :autor_id,
                   :body,
                   :description,

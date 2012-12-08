@@ -1,4 +1,4 @@
-class Gallery < ActiveRecord::Base
+class Gallery < NewDb
   attr_accessible :autor_id,
                   :body,
                   :description,

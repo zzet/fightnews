@@ -1,4 +1,4 @@
-class Post::Category < ActiveRecord::Base
+class Post::Category < NewDb
   attr_accessible :category_id, :post_id
 
   belongs_to :post

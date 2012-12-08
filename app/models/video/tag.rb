@@ -1,4 +1,4 @@
-class Video::Tag < ActiveRecord::Base
+class Video::Tag < NewDb
   attr_accessible :tag_id, :video_id
 
   belongs_to :video

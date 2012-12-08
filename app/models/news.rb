@@ -1,4 +1,4 @@
-class News < ActiveRecord::Base
+class News < NewDb
   attr_accessible :autor_id,
                   :body,
                   :description,

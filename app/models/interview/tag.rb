@@ -1,4 +1,4 @@
-class Interview::Tag < ActiveRecord::Base
+class Interview::Tag < NewDb
   attr_accessible :interview_id, :tag_id
 
   belongs_to :interview

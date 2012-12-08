@@ -1,4 +1,4 @@
-class Gallery::Tag < ActiveRecord::Base
+class Gallery::Tag < NewDb
   attr_accessible :gallery_id, :tag_id
 
   belongs_to :gallery

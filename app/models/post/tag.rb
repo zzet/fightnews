@@ -1,4 +1,4 @@
-class Post::Tag < ActiveRecord::Base
+class Post::Tag < NewDb
   attr_accessible :post_id, :tag_id
 
   belongs_to :post

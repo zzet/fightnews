@@ -1,4 +1,4 @@
-class Video < ActiveRecord::Base
+class Video < NewDb
   attr_accessible :autor_id,
                   :body,
                   :description,

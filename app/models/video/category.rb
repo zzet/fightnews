@@ -1,4 +1,4 @@
-class Video::Category < ActiveRecord::Base
+class Video::Category < NewDb
   attr_accessible :category_id, :video_id
 
   belongs_to :video

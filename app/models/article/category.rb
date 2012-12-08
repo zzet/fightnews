@@ -1,4 +1,4 @@
-class Article::Category < ActiveRecord::Base
+class Article::Category < NewDb
   attr_accessible :article_id, :category_id
 
   belongs_to :article

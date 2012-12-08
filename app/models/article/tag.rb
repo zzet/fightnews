@@ -1,4 +1,4 @@
-class Article::Tag < ActiveRecord::Base
+class Article::Tag < NewDb
   attr_accessible :atricle_id, :tag_id
 
   belongs_to :article

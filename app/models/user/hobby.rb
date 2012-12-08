@@ -1,4 +1,4 @@
-class User::Hobby < ActiveRecord::Base
+class User::Hobby < NewDb
   attr_accessible :description,
                   :position,
                   :profile_id,

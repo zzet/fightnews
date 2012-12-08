@@ -1,4 +1,4 @@
-class News::Tag < ActiveRecord::Base
+class News::Tag < NewDb
   attr_accessible :news_id, :tag_id
 
   belongs_to :news

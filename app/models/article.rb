@@ -1,4 +1,4 @@
-class Article <  ActiveRecord::Base
+class Article < NewDb
   attr_accessible :autor_id,
                   :body,
                   :description,

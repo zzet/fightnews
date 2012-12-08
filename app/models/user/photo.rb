@@ -1,3 +1,3 @@
-class User::Photo < ActiveRecord::Base
+class User::Photo < NewDb
   attr_accessible :description, :image, :profile_id, :title
 end

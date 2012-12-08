@@ -1,4 +1,4 @@
-class Category < ActiveRecord::Base
+class Category < NewDb
   attr_accessible :name
 
   validates :name, presence: true

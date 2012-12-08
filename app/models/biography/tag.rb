@@ -1,4 +1,4 @@
-class Biography::Tag < ActiveRecord::Base
+class Biography::Tag < NewDb
   attr_accessible :biography_id, :tag_id
 
   belongs_to :biography

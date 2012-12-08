@@ -1,4 +1,4 @@
-class Tag < ActiveRecord::Base
+class Tag < NewDb
   attr_accessible :name
 
   validates :name, presence: true

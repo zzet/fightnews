@@ -1,4 +1,4 @@
-class Interview::Category < ActiveRecord::Base
+class Interview::Category < NewDb
   attr_accessible :category_id, :interview_id
 
   belongs_to :interview

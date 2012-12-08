@@ -1,4 +1,4 @@
-class User::Profile < ActiveRecord::Base
+class User::Profile < NewDb
   attr_accessible :birthdate,
                   :city_id,
                   :country_id,
