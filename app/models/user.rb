@@ -15,6 +15,35 @@ class User < ActiveRecord::Base
                   :url,
                   :username
 
+  has_one :profile, dependent: :destroy
+
+  validates :email, presence: true, uniquiness: true
+  validates :nickname, presence: true, uniquiness: true
+
+  state_machine :state, :initial => :new do
+    state :new
+    state :active
+    state :banned
+    state :deleted
+
+    state :active do
+
+    end
+
+    event :activate do
+      transition [:new, :banned, :deleted] => :active
+    end
+
+    event :ban do
+      transition [:new, :active] => :banned
+    end
+
+    event :remove do
+      transition [:new, :active, :banned] => :deleted
+    end
+  end
+
+
   #def self.find_for_facebook_oauth access_token
     #if user = User.where(:url => access_token.info.urls.Facebook).first
       #user

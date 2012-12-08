@@ -1,3 +1,8 @@
 class User::Hobby < ActiveRecord::Base
-  attr_accessible :description, :position, :profile_id, :title
+  attr_accessible :description,
+                  :position,
+                  :profile_id,
+                  :title
+
+  belongs_to :profile
 end
