@@ -9,6 +9,7 @@ gem 'less-rails'
 gem "twitter-bootstrap-rails"
 
 gem 'pg'
+gem 'mysql2'
 
 gem 'usefull_scopes', :git => 'https://github.com/kaize/usefull_scopes.git'
 
@@ -68,6 +69,11 @@ group :development do
   gem 'rvm-capistrano'
   gem 'capistrano-ext'
   gem 'capistrano_colors'
+  gem 'legacy_data', git: 'git://github.com/squarelover/legacy_data.git'
+  gem 'safe_attributes'
+  gem "php-serialize"
+
+
 end
 
 group :test do
