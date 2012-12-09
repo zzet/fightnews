@@ -18,4 +18,6 @@ class Tag < NewDb
   has_many :news,           through: :news_tags
   has_many :posts,          through: :post_tags
   has_many :videos,         through: :video_tags
+
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 end

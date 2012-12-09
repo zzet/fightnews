@@ -6,6 +6,7 @@ class Legacy::User < LegacyDb
   has_many :role, through: :users_role
   has_one :usernode, foreign_key: :uid
   has_one :profile, foreign_key: :uid
+  has_many :ban_user, foreign_key: :uid
 
   # Constraints
   validates_numericality_of :created, :access, :login, :status, :picture
@@ -13,14 +14,14 @@ class Legacy::User < LegacyDb
   validates_uniqueness_of :name
 
   def url_alias
-    ua = UrlAlias.where("source = 'user/#{uid}'")
+    ua = Legacy::UrlAlias.where("source = 'user/#{uid}'")
     if ua.present?
       ua.first.alias
     end
   end
 
   def banned?
-    BanUser.find_by_uid(uid).present?
+    Legacy::BanUser.find_by_uid(uid).present?
   end
 
   def notify_about_comments?

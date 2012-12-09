@@ -16,6 +16,7 @@ class Post < NewDb
 
   # TODO
   #has_one :post_rating, dependent: :destroy
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 
   has_many :post_categories, dependent: :destroy, class_name: Post::Category
   has_many :categories, through: :post_categories

@@ -16,6 +16,7 @@ class News < NewDb
 
   # TODO
   #has_one :news_rating, dependent: :destroy
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 
   has_many :news_categories, dependent: :destroy, class_name: News::Category
   has_many :categories, through: :news_categories

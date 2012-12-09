@@ -4,7 +4,7 @@ class Article::Category < NewDb
   belongs_to :article
   belongs_to :category
 
-  validates :article, presence: true
+#  validates :article, presence: true
   validates :category, presence: true
 
 end

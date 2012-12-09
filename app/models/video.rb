@@ -16,12 +16,14 @@ class Video < NewDb
 
   # TODO
   #has_one :video_rating, dependent: :destroy
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 
   has_many :video_categories, dependent: :destroy, class_name: Video::Category
   has_many :categories, through: :video_categories
 
   has_many :video_tags, dependent: :destroy, class_name: Video::Tag
   has_many :tags, through: :video_tags
+
 
   mount_uploader :photo, PhotoUploader
 

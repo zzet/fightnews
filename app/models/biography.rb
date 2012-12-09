@@ -16,6 +16,7 @@ class Biography < NewDb
 
   # TODO
   #has_one :biography_rating, dependent: :destroy
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 
   has_many :biography_categories, dependent: :destroy, class_name: Biography::Category
   has_many :categories, through: :biography_categories

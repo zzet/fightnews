@@ -18,4 +18,6 @@ class Category < NewDb
   has_many :news,         through: :news_categories
   has_many :posts,        through: :post_categories
   has_many :videos,       through: :video_categories
+
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121117173714) do
+ActiveRecord::Schema.define(:version => 20121208220519) do
 
   create_table "article_categories", :force => true do |t|
     t.integer  "article_id"
@@ -29,8 +29,8 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.string   "body"
+    t.text     "description"
+    t.text     "body"
     t.string   "photo"
     t.integer  "autor_id"
     t.string   "source"
@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
 
   create_table "biographies", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.string   "body"
+    t.text     "description"
+    t.text     "body"
     t.string   "photo"
     t.integer  "autor_id"
     t.string   "source"
@@ -93,8 +93,8 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
 
   create_table "galleries", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.string   "body"
+    t.text     "description"
+    t.text     "body"
     t.string   "photo"
     t.integer  "autor_id"
     t.string   "source"
@@ -144,8 +144,8 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
 
   create_table "interviews", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.string   "body"
+    t.text     "description"
+    t.text     "body"
     t.string   "photo"
     t.integer  "autor_id"
     t.string   "source"
@@ -156,10 +156,18 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "new_old_relationships", :force => true do |t|
+    t.integer  "new_item_id"
+    t.integer  "old_item_id"
+    t.string   "new_item_type"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "news", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.string   "body"
+    t.text     "description"
+    t.text     "body"
     t.string   "photo"
     t.integer  "autor_id"
     t.string   "source"
@@ -200,8 +208,8 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
 
   create_table "posts", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.string   "body"
+    t.text     "description"
+    t.text     "body"
     t.string   "photo"
     t.integer  "autor_id"
     t.string   "source"
@@ -216,6 +224,14 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "url_aliases", :force => true do |t|
+    t.integer  "source_id"
+    t.string   "source_type"
+    t.string   "aliase"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "user_hobbies", :force => true do |t|
@@ -265,6 +281,7 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
     t.string   "password"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.string   "init_email"
   end
 
   create_table "video_categories", :force => true do |t|
@@ -283,8 +300,8 @@ ActiveRecord::Schema.define(:version => 20121117173714) do
 
   create_table "videos", :force => true do |t|
     t.string   "title"
-    t.string   "description"
-    t.string   "body"
+    t.text     "description"
+    t.text     "body"
     t.string   "photo"
     t.integer  "autor_id"
     t.string   "source"

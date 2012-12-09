@@ -16,6 +16,7 @@ class Gallery < NewDb
 
   # TODO
   #has_one :gallery_rating, dependent: :destroy
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 
   has_many :gallery_categories, dependent: :destroy, class_name: Gallery::Category
   has_many :gallery_tags, dependent: :destroy, class_name: Gallery::Tag

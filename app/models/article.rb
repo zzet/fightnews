@@ -15,6 +15,7 @@ class Article < NewDb
 
   # TODO
   #has_one :article_rating, dependent: :destroy
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 
   has_many :article_categories, dependent: :destroy, class_name: Article::Category
   has_many :categories, through: :article_categories

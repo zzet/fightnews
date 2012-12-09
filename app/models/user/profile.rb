@@ -13,4 +13,6 @@ class User::Profile < NewDb
   has_many :photos, dependent: :destroy
 
   validates :birthdate, presence: true
+
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 end

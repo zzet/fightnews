@@ -16,9 +16,10 @@ class User < NewDb
                   :username
 
   has_one :profile, dependent: :destroy
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 
-  validates :email, presence: true, uniquiness: true
-  validates :nickname, presence: true, uniquiness: true
+  #validates :email, presence: true, uniqueness: true
+  validates :nickname, presence: true, uniqueness: true
 
   state_machine :state, :initial => :new do
     state :new
@@ -43,6 +44,9 @@ class User < NewDb
     end
   end
 
+  def self.find_by_old_id(id)
+    NewOldRelationship.find_by_old_item_id_and_new_item_type(id, "User").new_item_id
+  end
 
   #def self.find_for_facebook_oauth access_token
     #if user = User.where(:url => access_token.info.urls.Facebook).first

@@ -17,11 +17,13 @@ class Legacy::Story < LegacyDb
   scope :actual, where(sti: "story")
 
   def body
-    field_data_body.first.body_value
+    ""
+    field_data_body.first.body_value if field_data_body
   end
 
   def description
-    field_data_body.first.body_summary
+    ""
+    field_data_body.first.body_summary if field_data_body
   end
 
   def image

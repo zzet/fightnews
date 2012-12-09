@@ -16,6 +16,7 @@ class Interview < NewDb
 
   # TODO
   #has_one :interview_rating, dependent: :destroy
+  has_one :new_old_relationship, as: :new_item, dependent: :destroy
 
   has_many :interview_categories, dependent: :destroy, class_name: Interview::Category
   has_many :categories, through: :interview_categories
