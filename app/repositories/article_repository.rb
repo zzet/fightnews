@@ -1,4 +1,4 @@
-module NewsRepository
+module ArticleRepository
   extend ActiveSupport::Concern
 
   included do

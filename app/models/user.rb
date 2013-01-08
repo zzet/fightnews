@@ -13,13 +13,18 @@ class User < NewDb
                   :nickname,
                   :provider,
                   :url,
-                  :username
+                  :username,
+                  :remote_avatar_url,
+                  :state,
+                  :state_event
 
   has_one :profile, dependent: :destroy
   has_one :new_old_relationship, as: :new_item, dependent: :destroy
 
   #validates :email, presence: true, uniqueness: true
   validates :nickname, presence: true, uniqueness: true
+
+  mount_uploader :avatar, AvatarUploader
 
   state_machine :state, :initial => :new do
     state :new
@@ -45,7 +50,12 @@ class User < NewDb
   end
 
   def self.find_by_old_id(id)
-    NewOldRelationship.find_by_old_item_id_and_new_item_type(id, "User").new_item_id
+    rel = NewOldRelationship.find_by_old_item_id_and_new_item_type(id, "User")
+    if rel
+      rel.new_item_id
+    else
+      1
+    end
   end
 
   #def self.find_for_facebook_oauth access_token

@@ -1,4 +1,6 @@
 class Article < NewDb
+  include ArticleRepository
+
   attr_accessible :autor_id,
                   :body,
                   :description,

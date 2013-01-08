@@ -17,17 +17,21 @@ class Legacy::Story < LegacyDb
   scope :actual, where(sti: "story")
 
   def body
-    ""
-    field_data_body.first.body_value if field_data_body
+    field_data_body.first.body_value if field_data_body && field_data_body.any?
   end
 
   def description
-    ""
-    field_data_body.first.body_summary if field_data_body
+    field_data_body.first.body_summary if field_data_body && field_data_body.any?
   end
 
   def image
-    field_data_field_image.first.file_managed
+    url = "http://www.flixya.com/files-photo/t/o/r/torikfauzi-2255501.jpg"
+    if field_data_field_image && field_data_field_image.any?
+      file = field_data_field_image.first.file_managed
+      uri = file.uri
+      url = "http://fightnews.ru/files/" << uri[9..-1]
+    end
+    url
   end
 
   def file

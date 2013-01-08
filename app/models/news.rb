@@ -1,4 +1,6 @@
 class News < NewDb
+  include NewsRepository
+
   attr_accessible :autor_id,
                   :body,
                   :description,
