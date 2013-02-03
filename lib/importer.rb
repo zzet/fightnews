@@ -62,7 +62,8 @@ class Importer
         end
       else
         article = old_rel.new_item
-        if article.photo.blank?
+        #if article.photo.blank?
+        if article.photo.blank? && !article.description.blank?
           article.remote_photo_url = story.image
           if article.save
             p "Update article photo image"
@@ -71,6 +72,8 @@ class Importer
             p story.image
             p article.errors
           end
+        else
+          p "Photo exist OR desc blank"
         end
         puts "ARTICLE: Skip article #{story.title}"
       end
@@ -136,7 +139,8 @@ class Importer
         end
       else
         interview = old_rel.new_item
-        if interview.photo.blank?
+        #if interview.photo.blank?
+        if interview.photo.blank? && !interview.description.blank?
           interview.remote_photo_url = story.image
           if interview.save
             p "Update interview photo image"
@@ -145,6 +149,8 @@ class Importer
             p story.image
             p interview.errors
           end
+        else
+          p "Photo exist OR desc blank"
         end
 
         puts "interview: Skip interview #{story.title}"
@@ -211,7 +217,8 @@ class Importer
         end
       else
         news = old_rel.new_item
-        if news.photo.blank?
+        #if news.photo.blank?
+        if news.photo.blank? && !news.description.blank?
           news.remote_photo_url = story.image
           if news.save
             p "Update news photo image"
@@ -220,6 +227,8 @@ class Importer
             p story.image
             p news.errors
           end
+        else
+          p "Photo exist OR desc is blank"
         end
 
         puts "NEWS: Skip news #{story.title}"
@@ -288,7 +297,8 @@ class Importer
         end
       else
         article = old_rel.new_item
-        if article.photo.blank?
+        #if article.photo.blank?
+        if article.photo.blank? && !article.description.blank?
           article.remote_photo_url = blog.image
           if article.save
             p "Update article photo image"
@@ -297,6 +307,8 @@ class Importer
             p blog.image
             p article.errors
           end
+        else
+          p "Photo exist OR description is Blank"
         end
 
         puts "article: Skip article #{blog.title}"
@@ -363,7 +375,8 @@ class Importer
         end
       else
         interview = old_rel.new_item
-        if interview.photo.blank?
+        #if interview.photo.blank?
+        if interview.photo.blank? && !interview.description.blank?
           interview.remote_photo_url = blog.image
           if interview.save
             p "Update interview photo image"
@@ -372,6 +385,8 @@ class Importer
             p blog.image
             p interview.errors
           end
+        else
+          p "Photo exist OR description is Blank"
         end
 
         puts "interview: Skip interview #{blog.title}"
@@ -438,7 +453,8 @@ class Importer
         end
       else
         news = old_rel.new_item
-        if news.photo.blank?
+        #if news.photo.blank?
+        if news.photo.blank? && !news.description.blank?
           news.remote_photo_url = blog.image
           if news.save
             p "Update news photo image"
@@ -447,6 +463,8 @@ class Importer
             p blog.image
             p news.errors
           end
+        else
+          p "Photo exist OR desc blank"
         end
 
         puts "news: Skip news #{blog.title}"
