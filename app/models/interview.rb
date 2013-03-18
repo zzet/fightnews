@@ -1,4 +1,6 @@
 class Interview < NewDb
+  include UsefullScopes
+
   attr_accessible :autor_id,
                   :body,
                   :description,

@@ -1,4 +1,6 @@
 class Interview::Tag < NewDb
+  include UsefullScopes
+
   attr_accessible :interview_id, :tag_id
 
   belongs_to :interview

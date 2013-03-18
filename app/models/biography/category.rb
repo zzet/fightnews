@@ -1,4 +1,6 @@
 class Biography::Category < NewDb
+  include UsefullScopes
+
   attr_accessible :biography_id, :category_id
 
   belongs_to :biography

@@ -1,4 +1,4 @@
-class ApplicationDecorator < Draper::Base
+class ApplicationDecorator < Draper::Decorator
   class << self
     def helpers
       Draper::ViewContext.current || ApplicationController.new.view_context

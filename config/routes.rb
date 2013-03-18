@@ -5,17 +5,25 @@ Fightnews::Application.routes.draw do
   scope module: :web do
     root to: "welcome#index"
 
+    get :sign_in, controller: :session, action: :show
+
     resources :pages, only: [] do
       collection do
         get :about
         get :contacts
+        get :faq
+        get :help
       end
     end
+
+    resource :search, only: [:show]
 
     resources :news, only: [:index, :show]
     resources :interviews, only: [:index, :show]
     resources :articles, only: [:index, :show]
+    resources :biographies, only: [:index, :show]
     resources :videos, only: [:index, :show]
+    resources :photos, only: [:index, :show]
 
     namespace :admin do
       root to: "welcome#index"

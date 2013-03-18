@@ -1,3 +1,5 @@
 class NewsDecorator < ApplicationDecorator
-  decorates :news
+  decorate :news
+  delegate_all
+
 end

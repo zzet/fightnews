@@ -1,4 +1,6 @@
 class Article::Category < NewDb
+  include UsefullScopes
+
   attr_accessible :article_id, :category_id
 
   belongs_to :article

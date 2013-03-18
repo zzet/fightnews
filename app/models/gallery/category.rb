@@ -1,4 +1,6 @@
 class Gallery::Category < NewDb
+  include UsefullScopes
+
   attr_accessible :category_id, :gallery_id
 
   belongs_to :gallery

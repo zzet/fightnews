@@ -1,4 +1,6 @@
 class Post::Category < NewDb
+  include UsefullScopes
+
   attr_accessible :category_id, :post_id
 
   belongs_to :post

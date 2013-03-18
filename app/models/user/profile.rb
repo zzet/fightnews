@@ -1,4 +1,6 @@
 class User::Profile < NewDb
+  include UsefullScopes
+
   attr_accessible :birthdate,
                   :city_id,
                   :country_id,

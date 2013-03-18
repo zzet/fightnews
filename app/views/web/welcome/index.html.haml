@@ -1,0 +1,124 @@
+.container_12
+  %article.grid_8
+    #video
+      #loopedSlider
+        .container1
+          .slides
+            .slide
+              #flash1
+                .aligncenter
+                  %a{:href => "http://www.adobe.com/go/EN_US-H-GET-FLASH"}
+                    %img{:alt => "", :src => "http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png"}/
+              :javascript
+                var fo = new FlashObject("http://www.youtube.com/v/2kodXWejuy0?version=3&hl=en_EN", "flash1", "620", "378", "8", "");
+                fo.addParam("quality", "high");
+                fo.addParam("allowFullScreen", "true");
+                fo.addParam("flashvars", "colorTheme=gray");
+                fo.addParam("wmode", "opaque");
+                fo.write("flash1");
+            .slide
+              #flash2
+                .aligncenter
+                  %a{:href => "http://www.adobe.com/go/EN_US-H-GET-FLASH"}
+                    %img{:alt => "", :src => "http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png"}/
+              :javascript
+                var fo = new FlashObject("http://www.youtube.com/v/wAachrYkS0Y?version=3&hl=en_EN", "flash2", "620", "378", "8", "");
+                fo.addParam("quality", "high");
+                fo.addParam("allowFullScreen", "true");
+                fo.addParam("flashvars", "colorTheme=gray");
+                fo.addParam("wmode", "opaque");
+                fo.write("flash2");
+            .slide
+              #flash3
+                .aligncenter
+                  %a{:href => "http://www.adobe.com/go/EN_US-H-GET-FLASH"}
+                    %img{:alt => "", :src => "http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png"}/
+              :javascript
+                var fo = new FlashObject("http://www.youtube.com/v/I7twdJFviRs?version=3&hl=en_EN", "flash3", "620", "378", "8", "");
+                fo.addParam("quality", "high");
+                fo.addParam("allowFullScreen", "true");
+                fo.addParam("flashvars", "colorTheme=gray");
+                fo.addParam("wmode", "opaque");
+                fo.write("flash3");
+            .slide
+              #flash4
+                .aligncenter
+                  %a{:href => "http://www.adobe.com/go/EN_US-H-GET-FLASH"}
+                    %img{:alt => "", :src => "http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png"}/
+              :javascript
+                var fo = new FlashObject("http://www.youtube.com/v/3ftOEHhFFNU?version=3&hl=en_EN", "flash4", "620", "378", "8", "");
+                fo.addParam("quality", "high");
+                fo.addParam("allowFullScreen", "true");
+                fo.addParam("flashvars", "colorTheme=gray");
+                fo.addParam("wmode", "opaque");
+                fo.write("flash4");
+        %ul.pagination
+          %li
+            %a{"data-href" => "0", :href => "#"}
+              .d-block
+                .date 15 dec, 2012
+              %span Lorem ipsum dolor sit amet conse ctetur
+          %li
+            %a{"data-href" => "1", :href => "#"}
+              .d-block
+                .date 15 dec, 2012
+              %span dolor sit amet conse ctetur adipisicing
+          %li
+            %a{"data-href" => "2", :href => "#"}
+              .d-block
+                .date 15 dec, 2012
+              %span Conse adipisicing elit, sed do eiusmod
+          %li.last
+            %a{"data-href" => "3", :href => "#"}
+              .d-block
+                .date 15 dec, 2012
+              %span adipisicing elit, sed do eiusmod tempor
+    .tabs
+      %ul.tabs-nav
+        %li.selected= link_to t(".latest_news"), "#tabs-1", class: "first"
+        %li.last= link_to t(".top_news"), "#tabs-2", class: "first"
+      = link_to t(".see_all_news"), news_index_path, class: "btn-1"
+      #tabs-1.tab-content
+        = render "web/shared/news", news: @last_news if @last_news
+      #tabs-2.tab-content
+        = render "web/shared/news", news: @top_news if @top_news
+  %article.grid_4
+    %figure.m1
+      %a{:href => "#"}
+        %img{:alt => "", :src => "images/banner-1.jpg"}/
+    .bg-h3.overflow
+      %h3 Latest REVIEW
+      %a.btn-1{:href => "#"} See all
+    .block-1
+      %span 15 dec, 2012
+      %figure
+        %img{:alt => "", :src => "images/page1-img6.jpg"}/
+      %a.link-1{:href => "#"}
+        Lorem ipsum dolor sit amet
+        conse ctetur
+      %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim.
+      .comments
+        %span 4 comments
+      %a.link-2{:href => "#"} Read more
+      .clear
+    .bg-h3
+      %h3 PRESS RELEASES
+      %a.btn-1{:href => "#"} See all
+    .block-2
+      %ul.list-1
+        %li
+          %a{:href => "#"} Lorem ipsum dolor sit amet conse...
+          %p
+            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+            %a{:href => "#"}
+        %li
+          %a{:href => "#"} Dolor sit amet conse...
+          %p
+            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+            %a{:href => "#"}
+        %li
+          %a{:href => "#"} Ipsum dolor sit amet conse...
+          %p
+            Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.
+            %a{:href => "#"}
+

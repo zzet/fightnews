@@ -1,0 +1,9 @@
+- news.each do |n|
+  %section
+    - if n.photo
+      %figure.img-indent= image_tag n.photo.thumb
+    .overflow
+      .d-block
+        .date= n.created_at
+      = link_to n.title, news_path(n)
+      %p= raw truncate(strip_tags(n.description), length: 200, separator: ' ', omission: '...')

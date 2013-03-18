@@ -1,4 +1,6 @@
 class Video::Category < NewDb
+  include UsefullScopes
+
   attr_accessible :category_id, :video_id
 
   belongs_to :video

@@ -1,4 +1,6 @@
 class Video::Tag < NewDb
+  include UsefullScopes
+
   attr_accessible :tag_id, :video_id
 
   belongs_to :video

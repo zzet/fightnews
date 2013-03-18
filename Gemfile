@@ -11,7 +11,7 @@ gem "twitter-bootstrap-rails"
 gem 'pg'
 gem 'mysql2'
 
-gem 'usefull_scopes', :git => 'https://github.com/kaize/usefull_scopes.git'
+gem 'usefull_scopes'
 
 gem 'simple_form'
 gem 'configus'
@@ -35,11 +35,10 @@ gem 'ckeditor', :git => 'https://github.com/paranoida/ckeditor.git'
 gem 'gon'
 gem 'i18n-js'
 gem 'google-analytics-rails'
-
+gem 'better_errors'
+gem 'binding_of_caller'
 gem 'untranslated', :git => 'https://github.com/Heimdell/untranslated.git'
-
 gem 'blankslate'
-
 gem 'countries'
 gem 'ipgeobase'
 
@@ -72,8 +71,6 @@ group :development do
   gem 'legacy_data', git: 'git://github.com/squarelover/legacy_data.git'
   gem 'safe_attributes'
   gem "php-serialize"
-
-
 end
 
 group :test do

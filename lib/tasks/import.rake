@@ -4,12 +4,19 @@ require File.expand_path('../../../config/environment', __FILE__)
 begin
   namespace :import do
 
-    desc "Import data from old DB"
+    desc "Import all"
     task :all do
+      Rake::Task["import:users"].invoke
+      Rake::Task["import:stories"].invoke
+      Rake::Task["import:blogs"].invoke
+    end
+
+    desc "Import data from old DB"
+    task :users do
 
       count = Legacy::User.count
-      puts "We need import #{count} users"
-      puts "Start"
+      puts "We need import #{count} users".yellow
+      puts "Start".yellow
 
       start = Time.now
 
@@ -28,13 +35,13 @@ begin
 
             if @user.save
               @user.create_new_old_relationship(old_item_id: legacy_user.uid)
-              puts "USER:: Move user #{legacy_user.name} in #{Time.now}"
+              puts "USER:: Move user #{legacy_user.name} in #{Time.now}".green
 
               @user.remote_avatar_url = legacy_user.avatar
               if @user.save
                 puts "Update user avatar"
               else
-                puts "Errors while update user avatar"
+                puts "Errors while update user avatar".red
                 p legacy_user.avatar
                 p @user.errors
               end
@@ -49,9 +56,9 @@ begin
             unless u.state
               u.state = :active
               if u.save
-                puts "Update user state"
+                puts "Update user state".green
               else
-                puts "Error while update user state"
+                puts "Error while update user state".red
                 p u.errors
               end
             end
@@ -61,7 +68,7 @@ begin
               if u.save
                 puts "Update user avatar"
               else
-                puts "Errors while update user avatar"
+                puts "Errors while update user avatar".red
                 p legacy_user.avatar
                 p u.errors
               end
@@ -73,13 +80,17 @@ begin
       end
 
       endwork = Time.now
-      puts "USER:: Import was in #{endwork - start} times"
+      puts "USER:: Import was in #{endwork - start} times".green
 
-      # Import Articles
+    end
+    # Import Articles
+
+    desc "Import data from old DB"
+    task :stories do
 
       count = Legacy::Story.actual.count
-      puts "We need import #{count} story"
-      puts "Start"
+      puts "We need import #{count} story".yellow
+      puts "Start".yellow
       start_time = Time.now
 
       step = 0
@@ -101,7 +112,7 @@ begin
         categories.each do |cat|
           if cat
             unless cats.include?(cat.name)
-              p "CATEGORY:: #{cat.name}"
+              p "CATEGORY:: #{cat.name}".gray
               cats << cat.name
             end
 
@@ -123,7 +134,7 @@ begin
               #when "Ring card girls"
               #when "Рейтинги"
             else
-              p "UNDEFINED:: Category #{cat.name}"
+              p "UNDEFINED:: Category #{cat.name}".red
             end
           end
         end
@@ -143,8 +154,12 @@ begin
       end
 
       end_time = Time.now
-      puts "STORY:: Import was in #{end_time - start_time} times"
+      puts "STORY:: Import was in #{end_time - start_time} times".green
 
+    end
+
+    desc "Import data from old DB"
+    task :blogs do
 
       count = Legacy::Blog.actual.count
       puts "We need import #{count} blog"

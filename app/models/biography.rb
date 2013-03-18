@@ -1,4 +1,6 @@
 class Biography < NewDb
+  include UsefullScopes
+
   attr_accessible :autor_id,
                   :body,
                   :description,

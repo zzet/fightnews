@@ -1,4 +1,5 @@
 class News < NewDb
+  include UsefullScopes
   include NewsRepository
 
   attr_accessible :autor_id,

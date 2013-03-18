@@ -1,4 +1,6 @@
 class Category < NewDb
+  include UsefullScopes
+
   attr_accessible :name
 
   validates :name, presence: true

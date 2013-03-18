@@ -1,4 +1,5 @@
 class Article < NewDb
+  include UsefullScopes
   include ArticleRepository
 
   attr_accessible :autor_id,

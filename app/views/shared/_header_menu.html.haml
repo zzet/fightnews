@@ -1,0 +1,18 @@
+.main
+  %nav
+    %ul.sf-menu
+      %li.active
+        = link_to t('.home'), root_path
+      %li
+        = link_to t(".news"), news_index_path
+      %li
+        = link_to t(".interviews"), interviews_path
+      %li
+        = link_to t(".articles"), articles_path
+      %li
+        = link_to t(".biographies"), biographies_path
+      %li
+        = link_to t(".videos"), videos_path
+      %li.last
+        = link_to t(".photos"), photos_path
+  .clear

@@ -1,4 +1,6 @@
 class News::Category < NewDb
+  include UsefullScopes
+
   attr_accessible :category_id, :news_id
 
   belongs_to :news

@@ -1,4 +1,6 @@
 class Gallery::Image < NewDb
+  include UsefullScopes
+
   attr_accessible :description, :image, :title, :gallery_id
 
   belongs_to :gallery
